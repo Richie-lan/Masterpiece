@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Masterpiece.Domain.Entity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace Masterpiece.Repository.DBContext
 {
     public class MasterpieceDBContext:DbContext
     {
+        public virtual DbSet<Product> Product { get; set; }
         public MasterpieceDBContext() : base("MasterpieceDBContext")
         {
             Database.SetInitializer<MasterpieceDBContext>(null);

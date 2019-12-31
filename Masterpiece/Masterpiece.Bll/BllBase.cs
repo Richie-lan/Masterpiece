@@ -1,4 +1,5 @@
 ﻿using Masterpiece.Code.Cache;
+using Masterpiece.Code.Common;
 using Masterpiece.Repository.DBContext;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace Masterpiece.Bll
 
         private void Log(string log)
         {
-            //LogHelper.WriteLog(log);
+            LogHelper.WriteLog(log);
         }
     }
 }

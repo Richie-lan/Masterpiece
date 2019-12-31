@@ -12,7 +12,12 @@ namespace Masterpiece.Web.Controllers
     public class ProductController : BaseController
     {
         public ActionResult Index()
+
         {
+            ProductBll bll = new ProductBll(db);
+            bll.GetProducts();
+            throw new Exception();
+
             return View();
         }
     }
