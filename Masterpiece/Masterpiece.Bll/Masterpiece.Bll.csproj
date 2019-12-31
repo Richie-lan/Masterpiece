@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1356777C-0D2B-4245-B633-F681EC93447D}</ProjectGuid>
+    <ProjectGuid>{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Masterpiece.Repository</RootNamespace>
-    <AssemblyName>Masterpiece.Repository</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Masterpiece.Bll</RootNamespace>
+    <AssemblyName>Masterpiece.Bll</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -51,27 +51,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBContext\MasterpieceDBContext.cs" />
-    <Compile Include="IRepository\IProductRepository.cs" />
-    <Compile Include="RepositoryBase\IRepositoryBase.cs" />
+    <Compile Include="BllBase.cs" />
+    <Compile Include="MasterpieceDbContextFactory.cs" />
+    <Compile Include="ProductBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryBase\RepositoryBase.cs" />
-    <Compile Include="Repository\ProductRepository.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Masterpiece.Code\Masterpiece.Code.csproj">
-      <Project>{C8037C69-2183-47EF-9E61-7C7C53A7530B}</Project>
+      <Project>{c8037c69-2183-47ef-9e61-7c7c53a7530b}</Project>
       <Name>Masterpiece.Code</Name>
     </ProjectReference>
     <ProjectReference Include="..\Masterpiece.Domain\Masterpiece.Domain.csproj">
-      <Project>{B3724DB9-855B-441C-9496-38BB89D38EBE}</Project>
+      <Project>{b3724db9-855b-441c-9496-38bb89d38ebe}</Project>
       <Name>Masterpiece.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Masterpiece.Repository\Masterpiece.Repository.csproj">
+      <Project>{1356777c-0d2b-4245-b633-f681ec93447d}</Project>
+      <Name>Masterpiece.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

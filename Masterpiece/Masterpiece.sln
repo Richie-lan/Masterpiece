@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masterpiece.Repository", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masterpiece.Code", "Masterpiece.Code\Masterpiece.Code.csproj", "{C8037C69-2183-47EF-9E61-7C7C53A7530B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masterpiece.Bll", "Masterpiece.Bll\Masterpiece.Bll.csproj", "{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{C8037C69-2183-47EF-9E61-7C7C53A7530B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8037C69-2183-47EF-9E61-7C7C53A7530B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8037C69-2183-47EF-9E61-7C7C53A7530B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{B3724DB9-855B-441C-9496-38BB89D38EBE} = {F9F6C89B-9E7F-4301-BEED-1200398FEE3D}
 		{1356777C-0D2B-4245-B633-F681EC93447D} = {F9F6C89B-9E7F-4301-BEED-1200398FEE3D}
 		{C8037C69-2183-47EF-9E61-7C7C53A7530B} = {CA98BD8C-CD82-48B8-85E6-BDD949FADC0B}
+		{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B} = {F9F6C89B-9E7F-4301-BEED-1200398FEE3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CA66709-DDD0-4F29-A413-C447C94F1C44}

@@ -120,6 +120,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Models\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -180,6 +182,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Masterpiece.Bll\Masterpiece.Bll.csproj">
+      <Project>{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}</Project>
+      <Name>Masterpiece.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Masterpiece.Code\Masterpiece.Code.csproj">
+      <Project>{C8037C69-2183-47EF-9E61-7C7C53A7530B}</Project>
+      <Name>Masterpiece.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Masterpiece.Domain\Masterpiece.Domain.csproj">
+      <Project>{B3724DB9-855B-441C-9496-38BB89D38EBE}</Project>
+      <Name>Masterpiece.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
