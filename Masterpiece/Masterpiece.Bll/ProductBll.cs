@@ -1,4 +1,5 @@
-﻿using Masterpiece.Domain.Entity;
+﻿using Masterpiece.Code.Cache;
+using Masterpiece.Domain.Entity;
 using Masterpiece.Domain.Enum;
 using Masterpiece.Domain.MasterException;
 using Masterpiece.Domain.MasterResource;
@@ -45,7 +46,8 @@ namespace Masterpiece.Bll
                 try
                 {
                     BeginTran();
-                    ProductRepository.Add(product);
+                    //ProductRepository.Add(product);
+                    CacheHelper.SetCache<string>("guoqi", CacheKeyEnum.Test_Cache, DateTime.Now);
                     transaction.Commit();
                     CommitTran();
                     return 1;

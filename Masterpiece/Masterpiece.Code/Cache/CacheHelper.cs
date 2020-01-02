@@ -193,10 +193,10 @@ namespace Masterpiece.Code.Cache
         {
             //if (CacheStaticDomain.Instance.CacheTypeMapping[cacheKey] == CacheTypeEnum.LocalCache || CacheStaticDomain.Instance.CacheTypeMapping[cacheKey] == CacheTypeEnum.Composite)
             //{
-            //    RedisCache.Instance.Set<DateTime>("AC_Refresh_" + cacheKey.ToString(), DateTime.Now, 3600);//1小时，目前所有缓存最长时间是1小时
+            //    RedisCache.Instance.Set<DateTime>("LZ_Refresh_" + cacheKey.ToString(), DateTime.Now, 3600);//1小时，目前所有缓存最长时间是1小时
             //}
 
-            RedisCache.Instance.Set<DateTime>("AC_Refresh_" + cacheKey.ToString(), DateTime.Now, 3600);//1小时，目前所有缓存最长时间是1小时
+            RedisCache.Instance.Set<DateTime>("LZ_Refresh_" + cacheKey.ToString(), DateTime.Now, 3600);//1小时，目前所有缓存最长时间是1小时
 
             CacheFactory.GetCacheHandler<object>(cacheKey).RemoveCache(cacheKey, id);
         }
@@ -218,7 +218,7 @@ namespace Masterpiece.Code.Cache
         {
             if (CacheKey.CacheKeyExpression[cacheKey].EndsWith("_{0}"))
             {
-                RedisCache.Instance.Set<DateTime>("AC_Refresh_" + cacheKey.ToString(), DateTime.Now, 3600);//1小时，目前所有缓存最长时间是1小时
+                RedisCache.Instance.Set<DateTime>("LZ_Refresh_" + cacheKey.ToString(), DateTime.Now, 3600);//1小时，目前所有缓存最长时间是1小时
             }
             else
             {

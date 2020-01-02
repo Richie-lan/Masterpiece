@@ -53,7 +53,7 @@ namespace Masterpiece.Code.Cache
                     return default(T);
                 }
 
-                DateTime refreshTime = RedisCache.Instance.Get<DateTime>("AC_Refresh_" + cacheKey.ToString());
+                DateTime refreshTime = RedisCache.Instance.Get<DateTime>("LZ_Refresh_" + cacheKey.ToString());
                 if (cacheObj.CacheTime < refreshTime)
                 {
                     RemoveCache(cacheKey, id);
@@ -86,7 +86,7 @@ namespace Masterpiece.Code.Cache
                         string key = String.Join(",", param);
                         if (dictCache.ContainsKey(key))
                         {
-                            DateTime refreshTime = RedisCache.Instance.Get<DateTime>("AC_Refresh_" + cacheKey.ToString());
+                            DateTime refreshTime = RedisCache.Instance.Get<DateTime>("LZ_Refresh_" + cacheKey.ToString());
 
                             if (dictCache[key].CacheTime < refreshTime)
                             {

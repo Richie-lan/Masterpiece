@@ -16,7 +16,7 @@ namespace Masterpiece.Code.Cache
         public static Dictionary<CacheKeyEnum, string> CacheKeyExpression = new Dictionary<CacheKeyEnum, string>();
         private static void InitCacheKey()
         {
-            string cachePrefix = "AC_";
+            string cachePrefix = "LZ_";
             CacheKeyExpression[CacheKeyEnum.Test_Cache] = cachePrefix + "Test_Cache_{0}";
             CacheKeyExpression[CacheKeyEnum.Product_Cache] = cachePrefix + "Product_Cache_{0}";
         }
