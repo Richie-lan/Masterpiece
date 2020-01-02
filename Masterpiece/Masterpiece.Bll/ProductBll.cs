@@ -47,7 +47,7 @@ namespace Masterpiece.Bll
                     BeginTran();
                     if (true)
                     {
-                        continue;
+                        
                     }
                     else
                     {
