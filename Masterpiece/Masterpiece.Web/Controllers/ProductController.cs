@@ -16,7 +16,7 @@ namespace Masterpiece.Web.Controllers
         {
             ProductBll bll = new ProductBll(db);
             var result = bll.Add(product);
-            return Json(1);
+            return View(result);
         }
     }
 }
