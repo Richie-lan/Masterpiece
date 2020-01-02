@@ -1,5 +1,6 @@
 ﻿using Masterpiece.Bll;
 using Masterpiece.Code.Common;
+using Masterpiece.Domain.Entity;
 using Masterpiece.Domain.MasterException;
 using System;
 using System.Collections.Generic;
@@ -11,14 +12,11 @@ namespace Masterpiece.Web.Controllers
 {
     public class ProductController : BaseController
     {
-        public ActionResult Index()
-
+        public ActionResult Index(Product product)
         {
             ProductBll bll = new ProductBll(db);
-            bll.GetProducts();
-            throw new Exception();
-
-            return View();
+            var result = bll.Add(product);
+            return Json(1);
         }
     }
 }

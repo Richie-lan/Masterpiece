@@ -96,8 +96,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ProductControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -106,6 +108,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Masterpiece.Bll\Masterpiece.Bll.csproj">
+      <Project>{D8EA5ADE-B22C-4D17-A9B5-9642C4927A2B}</Project>
+      <Name>Masterpiece.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Masterpiece.Domain\Masterpiece.Domain.csproj">
+      <Project>{B3724DB9-855B-441C-9496-38BB89D38EBE}</Project>
+      <Name>Masterpiece.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Masterpiece.Web\Masterpiece.Web.csproj">
       <Project>{3E32F0E3-3C52-42C3-837F-67B0249669F4}</Project>
       <Name>Masterpiece.Web</Name>

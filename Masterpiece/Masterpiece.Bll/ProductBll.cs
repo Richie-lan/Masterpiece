@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Masterpiece.Bll
 {
-    public class ProductBll:BllBase
+    public class ProductBll : BllBase
     {
         public ProductBll(MasterpieceDbContextFactory contextFactory) : base(contextFactory)
         {
@@ -24,7 +24,7 @@ namespace Masterpiece.Bll
         {
             get
             {
-                if(productRepository == null)
+                if (productRepository == null)
                 {
                     productRepository = new ProductRepository(contextFactory.DBContext);
                 }
@@ -38,23 +38,17 @@ namespace Masterpiece.Bll
             return ProductRepository.GetAll();
         }
 
-        public void Trans()
+        public int Add(Product product)
         {
             using (DbContextTransaction transaction = contextFactory.DBContext.Database.BeginTransaction())
             {
                 try
                 {
                     BeginTran();
-                    if (true)
-                    {
-                        
-                    }
-                    else
-                    {
-                        throw new MasterAdvancedException<List<Product>>(ErrorCodeEnum.Wrong, MasterErrorMsg.ConstWrong);
-                    }
+                    ProductRepository.Add(product);
                     transaction.Commit();
                     CommitTran();
+                    return 1;
                 }
                 catch (Exception ex)
                 {
@@ -63,6 +57,7 @@ namespace Masterpiece.Bll
                     throw ex;
                 }
             }
+            return 0;
         }
     }
 }
