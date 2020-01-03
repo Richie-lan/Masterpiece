@@ -4,6 +4,7 @@ using Masterpiece.Domain.Entity;
 using Masterpiece.Domain.MasterException;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
